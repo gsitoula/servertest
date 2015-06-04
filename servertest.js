@@ -6,7 +6,7 @@ var server = http.createServer(function(req, res){
 		'Content-Type' : "text/html"
 	});
 
-	var stream = fs.createReadStream('xp.html');
+	var stream = fs.createReadStream('.' + req.url);
 	stream.pipe(res);
 
 });
